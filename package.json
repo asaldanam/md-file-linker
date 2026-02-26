@@ -1,0 +1,36 @@
+{
+  "name": "md-file-linker",
+  "displayName": "Markdown File Linker",
+  "description": "Type @ in markdown files to insert relative file paths",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Markdown File Linker",
+      "properties": {
+        "mdFileLinker.prefix": {
+          "type": "string",
+          "default": "@",
+          "description": "Character that triggers the file picker"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.109.0",
+    "typescript": "^5.9.3"
+  }
+}
